@@ -22,100 +22,13 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 `index.js` is the content of the Workers script.  
 
-
-
-# Versions
-
-
-## 1. [Achrou/goindex-theme-acrou](https://github.com/Achrou/goindex-theme-acrou)
-
-
-Worker Script (Dark Mode) : [index.js](https://raw.githubusercontent.com/akbardwi/goindex/master/goindex-acrou/go2index/index.js)
-
-Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://raw.githubusercontent.com/akbardwi/goindex/master/goindex-acrou/go2index/index-multiple-accounts.js)
-
-Demo - [goindex.teamsdrives.workers.dev](https://goindex.teamsdrives.workers.dev)
-
-Copy the [index.js](https://raw.githubusercontent.com/akbardwi/goindex/master/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
-
-OR
-
-### GoIndex Auto Code Builder
-https://goindex.glitch.me/
-
-Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) version to automatically generate your `index.js` without having to manually edit anything.
-
-### [List View - Dark Mode](https://goindex.teamsdrives.workers.dev)
-![goindex-list](https://i.imgur.com/Y9pJo1V.png)
-
-### [Thumbnail View - Dark Mode](https://goindex.teamsdrives.workers.dev)
-![goindex-thumbnail](https://i.imgur.com/crg4dGp.gif)
-
-![goindex-awesome](https://i.imgur.com/JnEvGyg.gif)
-
-### Toggle View
-![goindex-toggle-view](https://i.imgur.com/RdvgfIf.png)
-
-
----
-## 2. [maple3142/GDIndex](https://github.com/maple3142/GDIndex)
----
-Worker Script - [index.js](https://github.com/akbardwi/goindex/blob/master/goindex-vue.js)
-
-### Upload Files using CLI `gdindex_upload.py`
-```py
-## Python Example
-import requests
-
-# "upload: true" in the script
-to_upload = "https://i.imgur.com/8w2KDrG.gif"
-baseURL = "https://gdindex-dark.teamsdrives.workers.dev/"
-# "folder1/folder2/goindex.gif"
-# Subdirectories of Folder in Google Drive
-fileName = "folder1/folder2/goindex.gif"
-# Default teamDriveID is "root"
-teamDriveID = "0ANCHcQq-8cmvUk9PVA"
-
-URL = baseURL + "/" + fileName + "?rootId=" + teamDriveID + "&url=" + to_upload
-r = requests.put(URL)
-print(r.text)
-```
-
-Demo - [gdindex-dark.teamsdrives.workers.dev](https://gdindex-dark.teamsdrives.workers.dev/)
-### [Demo - Dark Mode](https://gdindex-dark.teamsdrives.workers.dev/)
-![](https://i.imgur.com/1uIQZr5.png)
-
-## 3. donwa/goindex
-
-Workers Script - [index.js](https://github.com/akbardwi/goindex/blob/master/goindex.js)
-
-## Themes
-
-### Demo Classic : [goindex-classic.teamsdrives.workers.dev](https://goindex-classic.teamsdrives.workers.dev)
-
-![](https://i.imgur.com/lNeh3S3.png)
-
-### Demo Material: [goindex-material.teamsdrives.workers.dev](https://goindex-material.teamsdrives.workers.dev)
-
-![](https://i.imgur.com/jAq7Lsm.png)
-
-
 ## Deployment  
 1.Install `rclone` software locally  
 2.Follow [https://rclone.org/drive/]( https://rclone.org/drive/) bind a drive  
 3.Execute the command`rclone config file` to find the file `rclone.conf` path  
 4.Open `rclone.conf`,find the configuration `root_folder_id` and `refresh_token`  
-5.Download index.js in https://github.com/donwa/goindex and fill in root and refresh_token  
+5.Download index.js in https://github.com/akbardwi/goindex and fill in root and refresh_token  
 6.Deploy the code to [Cloudflare Workers](https://www.cloudflare.com/)
-
-## Free Teamdrives
-Get free Google Shared Drives
-
-- [td.fastio.me](https://td.fastio.me)
-
-- [td.hackgence.com](https://td.hackgence.com)
-
-- [team.hackgence.com](https://team.hackgence.com)
 
 ## Quick Deployment  
 1.Open https://goindex.glitch.me/  
