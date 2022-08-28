@@ -14,7 +14,7 @@ process.env.VUE_APP_G2INDEX_VERSION = require("./package.json").g2index;
 
 process.env.VUE_APP_CDN_PATH =
   process.env.VUE_APP_CDN_PATH.replace(
-    "@master",
+    "@v1.0.1",
     "@v" + process.env.VUE_APP_VERSION
   ) || "/";
 
